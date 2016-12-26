@@ -36,7 +36,7 @@ def read_csv(file_name):
 
 def create_latex(file_name,dir_folder="LaTeX"):
     print("\nCreate LaTeX table for "+file_name+" . . .")
-    latex_file=open(os.path.join(os.getcwd(),dir_folder+"\\")+file_name[:-4]+".txt","w")
+    latex_file=open(os.path.join(os.getcwd(),dir_folder+"\\")+file_name[:-4]+".tex","w")
     csv_lines=read_csv(file_name)
     col_num=len(csv_lines[0])
     header_handler(latex_file,col_num=col_num)
