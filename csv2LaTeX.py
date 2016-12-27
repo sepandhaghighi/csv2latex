@@ -15,6 +15,18 @@ def escape_char(lines_list):
     return lines_list
 
 
+def white_space(line_list):
+    len_list = []
+    for line in line_list:
+        if len(len_list)==0:
+            len_list.extend(list(map(len,line)))
+        else:
+            for i in range(len(line)):
+                if len(line) <= len(len_list):
+                    if len(line[i]) > len_list[i]:
+                        len_list[i] = len(line[i])
+    return len_list
+
 
 def header_handler(file,col_num,caption="my-caption",label="my-label"):
     file.write(header["static_1"])
@@ -22,6 +34,7 @@ def header_handler(file,col_num,caption="my-caption",label="my-label"):
     file.write(header["caption"]+"{"+caption+"}\n")
     file.write(header["label"]+"{"+label+"}\n")
     file.write(header["align"]+"{"+"c"*col_num+"}\n")
+
 def footer_handler(file):
     file.write(footer+"\n")
 
@@ -30,21 +43,30 @@ def read_csv(file_name):
     csv_file=open(file_name,"r")
     csv_lines=[]
     for line in csv_file:
-        csv_lines.append(line.split(","))
+        splited_line=line.split(",")
+        csv_lines.append(splited_line)
     csv_file.close()
     return csv_lines
 
-def create_latex(file_name,dir_folder="LaTeX"):
+def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     print("\nCreate LaTeX table for "+file_name+" . . .")
     latex_file=open(os.path.join(os.getcwd(),dir_folder+"\\")+file_name[:-4]+".tex","w")
-    csv_lines=read_csv(file_name)
+    csv_read=read_csv(file_name)
+    csv_lines=csv_read
+
     col_num=len(csv_lines[0])
     header_handler(latex_file,col_num=col_num)
-    for item in escape_char(csv_lines):
+    escape_out=escape_char(csv_lines)
+    list_len = white_space(escape_out)
+    for item in escape_out :
         for i in range(len(item)):
             latex_file.write(item[i])
             if i<len(item)-1:
+                if empty_space==True:
+                    latex_file.write(" " * (list_len[i]-len(item[i])))
                 latex_file.write("&")
+                if empty_space==True:
+                    latex_file.write(" "*list_len[i])
         latex_file.write("\\\\"+"\n")
     footer_handler(latex_file)
     latex_file.close()
