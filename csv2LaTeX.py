@@ -60,13 +60,15 @@ def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     list_len = white_space(escape_out)
     for item in escape_out :
         for i in range(len(item)):
-            latex_file.write(item[i])
             if i<len(item)-1:
+                latex_file.write(item[i])
                 if empty_space==True:
                     latex_file.write(" " * (list_len[i]-len(item[i])))
                 latex_file.write("&")
                 if empty_space==True:
                     latex_file.write(" "*list_len[i])
+            else:
+                latex_file.write(item[i][:-1])
         latex_file.write("\\\\"+"\n")
     footer_handler(latex_file)
     latex_file.close()
