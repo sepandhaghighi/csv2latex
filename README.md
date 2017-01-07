@@ -11,3 +11,5 @@ Simple python script that convert csv file to LaTeX table.
 
 <hr/>
 </div>
+
+- Just run csv2latex.py
