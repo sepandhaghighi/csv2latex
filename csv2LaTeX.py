@@ -87,6 +87,7 @@ def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     latex_file.close()
     print("Done!")
     print(line(70, "*"))
+    print(signature())
 
 def make_dir():
     if "LaTeX" not in os.listdir():
