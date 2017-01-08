@@ -7,18 +7,15 @@ def line(number,char="-"):
         response=response+char
     return response
 
-def signature(frame=41)
-    sign = ""
-    for i in range(frame)
-        sign = sign + "%"
+def signature(frame=41):
+    sign=line(frame,char="%")
     sign = sign + "\n"
-    Sign = sign + "%\ csv2LaTex project\n %\ for more info please visit : https://github.com/sepandhaghighi/csv2latex"
-    for i in range(frame)
-        sign = sign + "%"
-
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
+    sign = sign + "csv2LaTex project\n for more info please visit : https://github.com/sepandhaghighi/csv2latex\n"
+    sign=sign+line(frame,"%")
+    return sign
+    #% "ModernCV" CV and Cover Letter
+    #% LaTeX Template
+    #% Version 1.1 (9/12/12)
 
 def escape_char(lines_list):
     for i in range(len(lines_list)):
@@ -87,13 +84,13 @@ def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     latex_file.close()
     print("Done!")
     print(line(70, "*"))
-    print(signature())
 
 def make_dir():
     if "LaTeX" not in os.listdir():
         os.mkdir("LaTeX")
 
 if __name__=="__main__":
+    print(signature())
     list_of_files=os.listdir()
     csv_files=[]
     make_dir()
