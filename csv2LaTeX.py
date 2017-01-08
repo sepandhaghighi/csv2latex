@@ -23,6 +23,7 @@ def signature(frame=41)
 def escape_char(lines_list):
     for i in range(len(lines_list)):
         for j in range(len(lines_list[i])):
+            for char in char_list:  # instead of using for use a list to find and replace
                 lines_list[i][j]=lines_list[i][j].replace(char,"\\"+char)
     return lines_list
 
@@ -64,8 +65,10 @@ def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     print("\nCreate LaTeX table for "+file_name+" . . .")
     latex_file=open(os.path.join(os.getcwd(),dir_folder+"\\")+file_name[:-4]+".tex","w")
     csv_read=read_csv(file_name)
+    csv_lines=csv_read  # continue using csv_read without declairing csv_lines
 
     col_num=len(csv_lines[0])
+    header_handler(latex_file,col_num=col_num) # col_num is useless here
     escape_out=escape_char(csv_lines)
     list_len = white_space(escape_out)
     for item in escape_out :
