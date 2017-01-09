@@ -3,8 +3,10 @@ from params import *
 import sys
 def line(number,char="-"):
     response=""
-    for i in range(number):
-        response=response+char
+    i=0
+    while(i<number):
+        response+=char
+        i+=1
     return response
 
 def signature(frame=41):
