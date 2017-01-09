@@ -1,8 +1,8 @@
-# CSV2LaTeX         
-
-Simple python script that convert csv file to LaTeX table.                  
-
+ 
 <div align="center">
+<img src="http://sepandhaghighi.github.io/csv2latex/Files/logo.png"/>
+<br/>
+Simple python script that convert csv file to LaTeX table.  
 <hr/>
 <a href="https://codeclimate.com/github/sepandhaghighi/csv2latex"><img src="https://codeclimate.com/github/sepandhaghighi/csv2latex/badges/gpa.svg" /></a>
 <a href="https://scrutinizer-ci.com/g/sepandhaghighi/csv2latex/?branch=master"><img src="https://scrutinizer-ci.com/g/sepandhaghighi/csv2latex/badges/quality-score.png?b=master"/></a>
