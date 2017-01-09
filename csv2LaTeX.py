@@ -18,10 +18,10 @@ def signature(frame=41):
     #% Version 1.1 (9/12/12)
 
 def escape_char(lines_list):
-    for i in range(len(lines_list)):
-        for j in range(len(lines_list[i])):
+    for i,item_1 in enumerate(lines_list):
+        for j,item_2 in enumerate(item_1):
             for char in char_list:  # instead of using for use a list to find and replace
-                lines_list[i][j]=lines_list[i][j].replace(char,"\\"+char)
+                lines_list[i][j]=item_2.replace(char,"\\"+char)
     return lines_list
 
 
@@ -31,10 +31,10 @@ def white_space(line_list):
         if len(len_list)==0:
             len_list.extend(list(map(len,line)))
         else:
-            for i in range(len(line)):
+            for i,item in enumerate(line):
                 if len(line) <= len(len_list):
-                    if len(line[i]) > len_list[i]:
-                        len_list[i] = len(line[i])
+                    if len(item) > len_list[i]:
+                        len_list[i] = len(item)
     return len_list
 
 
@@ -69,16 +69,16 @@ def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     escape_out=escape_char(csv_lines)
     list_len = white_space(escape_out)
     for item in escape_out :
-        for i in range(len(item)):
+        for i,item_2 in enumerate(item):
             if i<len(item)-1:
-                latex_file.write(item[i])
+                latex_file.write(item_2)
                 if empty_space==True:
-                    latex_file.write(" " * (list_len[i]-len(item[i])))
+                    latex_file.write(" " * (list_len[i]-len(item_2)))
                 latex_file.write("&")
                 if empty_space==True:
                     latex_file.write(" "*list_len[i])
             else:
-                latex_file.write(item[i][:-1])
+                latex_file.write(item_2[:-1])
         latex_file.write("\\\\"+"\n")
     footer_handler(latex_file)
     latex_file.close()
