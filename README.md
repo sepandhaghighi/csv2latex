@@ -12,8 +12,13 @@ Simple python script that convert csv file to LaTeX table.
 
 <a href="http://www.shaghighi.ir/csv2latex"><img src="https://img.shields.io/website-up-down-green-red/http/shields.io.svg"/></a>
  <a href="https://gitter.im/csv2latex"><img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg"/></a>
+<a href="https://badge.fury.io/py/csv2latex"><img src="https://badge.fury.io/py/csv2latex.svg" alt="PyPI version" height="18"></a>
 
 <hr/>
 </div>
 
-- Just run csv2latex.py
+## Installation ##
+- Use PyPI : `pip install csv2latex`
+- Use Source file : Download last release
+## Usage ##
+- Just copy csv files to csv2latex.py folder and run 
