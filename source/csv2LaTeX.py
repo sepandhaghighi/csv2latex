@@ -14,13 +14,21 @@ def line(number,char="-"):
         response+=char
         i+=1
     return response
-
-def signature(frame=41):
+def logo_handler():
     '''
 
+    :return: None (print logo)
+    '''
+    if "logo.txt" in os.listdir():
+        with open("logo.txt","r") as logo_file:
+            for line in logo_file:
+                print(line.rstrip())
+def signature(frame=41):
+    '''
     :param frame: number of items in line
     :return: header string
     '''
+    logo_handler()
     sign=line(frame,char="%")
     sign = sign + "\n"
     sign = sign + "csv2LaTex project\n for more info please visit : https://github.com/sepandhaghighi/csv2latex\n"
@@ -153,6 +161,7 @@ if __name__=="__main__":
         print("There is no csv file in this folder (Please copy your csv files here)")
         sys.exit()
     else:
+        print(str(len(csv_files))+" CSV file found in this folder! ;-) ")
         for item in csv_files:
             create_latex(item)
 
