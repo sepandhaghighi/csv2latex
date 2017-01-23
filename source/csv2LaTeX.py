@@ -100,7 +100,7 @@ if __name__=="__main__":
         if i.find(".csv")!=-1:
             csv_files.append(i)
     if len(csv_files)==0:
-        print("There is no csv file")
+        print("There is no csv file in this folder (Please copy your csv files here)")
         sys.exit()
     else:
         for item in csv_files:
