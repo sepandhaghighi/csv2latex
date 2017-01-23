@@ -2,6 +2,12 @@ import os
 from params import *
 import sys
 def line(number,char="-"):
+    '''
+
+    :param number: number of items to print
+    :param char: each item of printed line
+    :return: line string
+    '''
     response=""
     i=0
     while(i<number):
@@ -10,6 +16,11 @@ def line(number,char="-"):
     return response
 
 def signature(frame=41):
+    '''
+
+    :param frame: number of items in line
+    :return: header string
+    '''
     sign=line(frame,char="%")
     sign = sign + "\n"
     sign = sign + "csv2LaTex project\n for more info please visit : https://github.com/sepandhaghighi/csv2latex\n"
@@ -20,6 +31,11 @@ def signature(frame=41):
     #% Version 1.1 (9/12/12)
 
 def escape_char(lines_list):
+    '''
+
+    :param lines_list: list of lines as input (list of strings)
+    :return: list of lines after escape character
+    '''
     for i,item_1 in enumerate(lines_list):
         for j,item_2 in enumerate(item_1):
             for char in char_list:  # instead of using for use a list to find and replace
@@ -28,19 +44,32 @@ def escape_char(lines_list):
 
 
 def white_space(line_list):
+    '''
+
+    :param line_list: list of lines as input (list of strings)
+    :return: list of comma seperated item in plain text for spacing in next step
+    '''
     len_list = []
     for line in line_list:
         if len(len_list)==0:
             len_list.extend(list(map(len,line)))
         else:
-            for i,item in enumerate(line):
-                if len(line) <= len(len_list):
+            if len(line) <= len(len_list):
+                for i,item in enumerate(line):
                     if len(item) > len_list[i]:
                         len_list[i] = len(item)
     return len_list
 
 
 def header_handler(file,col_num,caption="my-caption",label="my-label"):
+    '''
+
+    :param file: input latex file
+    :param col_num: number of col
+    :param caption: caption for table
+    :param label: label for table
+    :return: None
+    '''
     file.write(header["static_1"])
     file.write(header["static_2"])
     file.write(header["caption"]+"{"+caption+"}\n")
@@ -48,10 +77,20 @@ def header_handler(file,col_num,caption="my-caption",label="my-label"):
     file.write(header["align"]+"{"+"c"*col_num+"}\n")
 
 def footer_handler(file):
+    '''
+
+    :param file: latex file
+    :return: None
+    '''
     file.write(footer+"\n")
 
 
 def read_csv(file_name):
+    '''
+
+    :param file_name: csv file name (as string)
+    :return: list of csv file lines
+    '''
     csv_file=open(file_name,"r")
     csv_lines=[]
     for line in csv_file:
@@ -61,6 +100,13 @@ def read_csv(file_name):
     return csv_lines
 
 def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
+    '''
+
+    :param file_name: file name of latex file 9(as string)
+    :param dir_folder: output folder name (as string)
+    :param empty_space: boolean paramter (True-->modify empty space)
+    :return:  None
+    '''
     print("\nCreate LaTeX table for "+file_name+" . . .")
     latex_file=open(os.path.join(os.getcwd(),dir_folder+"\\")+file_name[:-4]+".tex","w")
     csv_read=read_csv(file_name)
@@ -88,6 +134,10 @@ def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     print(line(70, "*"))
 
 def make_dir():
+    '''
+
+    :return: None
+    '''
     if "LaTeX" not in os.listdir():
         os.mkdir("LaTeX")
 
