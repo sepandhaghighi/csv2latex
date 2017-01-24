@@ -107,6 +107,7 @@ def read_csv(file_name):
     return csv_lines
 
 def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
+
     '''
 
     :param file_name: file name of latex file 9(as string)
@@ -114,31 +115,34 @@ def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     :param empty_space: boolean paramter (True-->modify empty space)
     :return:  None
     '''
-    print("\nCreate LaTeX table for "+file_name+" . . .")
-    latex_file=open(os.path.join(os.getcwd(),dir_folder+"\\")+file_name[:-4]+".tex","w")
-    csv_read=read_csv(file_name)
-    csv_lines=csv_read  # continue using csv_read without declairing csv_lines
+    try:
+        print("\nCreate LaTeX table for "+file_name+" . . .")
+        latex_file=open(os.path.join(os.getcwd(),dir_folder+"\\")+file_name[:-4]+".tex","w")
+        csv_read=read_csv(file_name)
+        csv_lines=csv_read  # continue using csv_read without declairing csv_lines
 
-    col_num=len(csv_lines[0])
-    header_handler(latex_file,col_num=col_num) # col_num is useless here
-    escape_out=escape_char(csv_lines)
-    list_len = white_space(escape_out)
-    for item in escape_out :
-        for i,item_2 in enumerate(item):
-            if i<len(item)-1:
-                latex_file.write(item_2)
-                if empty_space==True:
-                    latex_file.write(" " * (list_len[i]-len(item_2)))
-                latex_file.write("&")
-                if empty_space==True:
-                    latex_file.write(" "*list_len[i])
-            else:
-                latex_file.write(item_2[:-1])
-        latex_file.write("\\\\"+"\n")
-    footer_handler(latex_file)
-    latex_file.close()
-    print("Done!")
-    print(line(70, "*"))
+        col_num=len(csv_lines[0])
+        header_handler(latex_file,col_num=col_num) # col_num is useless here
+        escape_out=escape_char(csv_lines)
+        list_len = white_space(escape_out)
+        for item in escape_out :
+            for i,item_2 in enumerate(item):
+                if i<len(item)-1:
+                    latex_file.write(item_2)
+                    if empty_space==True:
+                        latex_file.write(" " * (list_len[i]-len(item_2)))
+                    latex_file.write("&")
+                    if empty_space==True:
+                        latex_file.write(" "*list_len[i])
+                else:
+                    latex_file.write(item_2[:-1])
+            latex_file.write("\\\\"+"\n")
+        footer_handler(latex_file)
+        latex_file.close()
+        print("Done!")
+        print(line(70, "*"))
+    except:
+        print("Error In LaTeX Creation")
 
 def make_dir():
     '''
@@ -146,7 +150,11 @@ def make_dir():
     :return: None
     '''
     if "LaTeX" not in os.listdir():
-        os.mkdir("LaTeX")
+        try:
+            os.mkdir("LaTeX")
+        except:
+            print("Access Error")
+            sys.exit()
 
 if __name__=="__main__":
     print(signature())
