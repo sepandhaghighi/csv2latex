@@ -20,6 +20,7 @@ def logo_handler():
     '''
     try:
         print(logo)
+        print("Version : "+str(version))
     except:
         pass
 def signature(frame=41):
@@ -30,7 +31,7 @@ def signature(frame=41):
     logo_handler()
     sign=line(frame,char="%")
     sign = sign + "\n"
-    sign = sign + "csv2LaTex project\n for more info please visit : https://github.com/sepandhaghighi/csv2latex\n"
+    sign = sign + "For more info please visit : https://github.com/sepandhaghighi/csv2latex\n"
     sign=sign+line(frame,"%")
     return sign
     #% "ModernCV" CV and Cover Letter
@@ -166,6 +167,7 @@ if __name__=="__main__":
             csv_files.append(i)
     if len(csv_files)==0:
         print("There is no csv file in this folder (Please copy your csv files here)")
+        print("Current Directory : "+str(os.getcwd()))
         sys.exit()
     else:
         print(str(len(csv_files))+" CSV file found in this folder! ;-) ")
