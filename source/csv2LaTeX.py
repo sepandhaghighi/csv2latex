@@ -16,13 +16,12 @@ def line(number,char="-"):
     return response
 def logo_handler():
     '''
-
     :return: None (print logo)
     '''
-    if "logo.txt" in os.listdir():
-        with open("logo.txt","r") as logo_file:
-            for line in logo_file:
-                print(line.rstrip())
+    try:
+        print(logo)
+    except:
+        pass
 def signature(frame=41):
     '''
     :param frame: number of items in line
