@@ -24,3 +24,21 @@ Simple python script that convert csv file to LaTeX table.
 
 ## Usage ##
 - Just copy csv files to csv2latex.py folder and run 
+
+
+## Issues & Bug Reports			
+
+Just fill an issue and describe it. We'll check it ASAP!							
+or send an email to [sepand@qpage.ir](mailto:sepand@qpage.ir "sepand@qpage.ir"). 
+
+
+## Contribution			
+
+You can fork the repository, improve or fix some part of it and then send the pull requests back if you want to see them here. I really appreciate that. ❤️			
+
+Remember to write a few tests for your code before sending pull requests. 
+
+
+## License
+
+<a href="https://github.com/sepandhaghighi/csv2latex/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
