@@ -41,8 +41,16 @@ Remember to write a few tests for your code before sending pull requests.
 
 ## License
 
-<a href="https://github.com/sepandhaghighi/csv2latex/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
+<a href="https://github.com/sepandhaghighi/csv2latex/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>		
 
-[![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/badge.svg?style=beer-square)](https://beerpay.io/sepandhaghighi/csv2latex)  [![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/make-wish.svg?style=flat-square)](https://beerpay.io/sepandhaghighi/csv2latex?focus=wish)
+## Donate to our project
+<h3>Beerpay :</h3>				
+
+Hey dude! Help me out for a couple of :beers:!				
+
+
+[![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/badge.svg?style=beer-square)](https://beerpay.io/sepandhaghighi/csv2latex)  [![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/make-wish.svg?style=flat-square)](https://beerpay.io/sepandhaghighi/csv2latex?focus=wish)			
+
+<h3>Payping (For Iranian citizens) :</h3>
+
+<a href="http://www.payping.net/sepandhaghighi" target="__blank"><img src="http://www.qpage.ir/images/payping.png" height=100px width=100px></a>				
