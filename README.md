@@ -42,3 +42,7 @@ Remember to write a few tests for your code before sending pull requests.
 ## License
 
 <a href="https://github.com/sepandhaghighi/csv2latex/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg"/></a>
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/badge.svg?style=beer-square)](https://beerpay.io/sepandhaghighi/csv2latex)  [![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/make-wish.svg?style=flat-square)](https://beerpay.io/sepandhaghighi/csv2latex?focus=wish)
