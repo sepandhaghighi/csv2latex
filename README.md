@@ -49,7 +49,12 @@ Remember to write a few tests for your code before sending pull requests.
 Hey dude! Help me out for a couple of :beers:!				
 
 
-[![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/badge.svg?style=beer-square)](https://beerpay.io/sepandhaghighi/csv2latex)  [![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/make-wish.svg?style=flat-square)](https://beerpay.io/sepandhaghighi/csv2latex?focus=wish)			
+[![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/badge.svg?style=beer-square)](https://beerpay.io/sepandhaghighi/csv2latex)  [![Beerpay](https://beerpay.io/sepandhaghighi/csv2latex/make-wish.svg?style=flat-square)](https://beerpay.io/sepandhaghighi/csv2latex?focus=wish)					
+
+<h3>Bitcoin :</h3>					
+
+```1XGr9qbZjBpUQJJSB6WtgBQbDTgrhPLPA```			
+			
 
 <h3>Payping (For Iranian citizens) :</h3>
 
