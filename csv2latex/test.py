@@ -8,4 +8,5 @@
 [['asdasdasd', 'adsasdasdasd'], ['asdasdasdasd', 'aasdasdsds']]
 >>> white_space([['asdasdasd','adsasdasdasd'],['asdasdasdasd','aasdasdsds']])
 [12, 12]
+
 '''
