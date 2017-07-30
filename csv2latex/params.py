@@ -19,4 +19,5 @@ _________   _____________   ____________ .____         ___________    ____  ___
 '''
 
 
-version=0.1
+version=0.11
+UPDATE_URL="http://www.shaghighi.ir/csv2latex/update"

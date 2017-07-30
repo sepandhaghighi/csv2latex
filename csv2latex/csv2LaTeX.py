@@ -1,6 +1,23 @@
 import os
 from .params import *
 import sys
+import requests
+
+def check_update(DEBUG=False):
+    '''
+    This function check csv2latex site for newversion
+    :param DEBUG: Flag for using Debug mode
+    :type DEBUG:bool
+    :return: True if new version is available
+    '''
+    try:
+        new_version=requests.get(UPDATE_URL).text
+        if float(new_version)>float(version):
+            print("New Version ("+new_version+") Of csv2latex is available here")
+    except Exception as e:
+        if DEBUG==True:
+            print(str(e))
+
 def line(number,char="-"):
     '''
     :param number: number of items to print

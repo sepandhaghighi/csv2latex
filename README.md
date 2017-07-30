@@ -18,7 +18,7 @@ Simple python script that convert csv file to LaTeX table.
 
 ## Installation ##
 ### Source Code
-- Download [Version 0.1](https://github.com/sepandhaghighi/csv2latex/archive/v0.1.zip) or [Latest Source ](https://github.com/sepandhaghighi/csv2latex/archive/master.zip)
+- Download [Version 0.11](https://github.com/sepandhaghighi/csv2latex/archive/v0.11.zip) or [Latest Source ](https://github.com/sepandhaghighi/csv2latex/archive/master.zip)
 
 - `python3 setup.py install` or `python setup.py install` (Need root access)				
 

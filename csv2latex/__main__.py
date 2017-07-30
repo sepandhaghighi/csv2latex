@@ -9,6 +9,7 @@ if __name__=="__main__":
         else:
             print("Bad Input")
     else:
+        check_update()
         print(signature())
         list_of_files=os.listdir()
         csv_files=[]
