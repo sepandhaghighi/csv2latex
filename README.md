@@ -31,7 +31,11 @@ Simple python script that convert csv file to LaTeX table.
 
 ## Usage ##
 - Run csv2latex near csv files :
-```python -m csv2latex``` or ```python3 -m csv2latex```
+```python -m csv2latex``` or ```python3 -m csv2latex```	
+<div align="center">
+<img src="http://www.shaghighi.ir/csv2latex/images/usage.gif" alt="csv2latex usage" title="csv2latex usage">
+
+</div>
 
 
 ## Issues & Bug Reports			

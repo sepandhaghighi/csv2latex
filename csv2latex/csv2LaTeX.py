@@ -117,7 +117,7 @@ def create_latex(file_name,dir_folder="LaTeX",empty_space=True):
     '''
     try:
         print("\nCreate LaTeX table for "+file_name+" . . .")
-        latex_file=open(os.path.join(os.getcwd(),dir_folder+"\\")+file_name[:-4]+".tex","w")
+        latex_file=open(os.path.join(os.getcwd(),dir_folder,file_name[:-4]+".tex"),"w")
         csv_read=read_csv(file_name)
         csv_lines=csv_read  # continue using csv_read without declairing csv_lines
 
