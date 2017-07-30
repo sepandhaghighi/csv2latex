@@ -13,7 +13,7 @@ def check_update(DEBUG=False):
     try:
         new_version=requests.get(UPDATE_URL).text
         if float(new_version)>float(version):
-            print("New Version ("+new_version+") Of csv2latex is available here")
+            print("New Version ("+new_version+") Of csv2latex is available (visit github page)")
     except Exception as e:
         if DEBUG==True:
             print(str(e))
