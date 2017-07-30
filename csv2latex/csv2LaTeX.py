@@ -3,7 +3,6 @@ from .params import *
 import sys
 def line(number,char="-"):
     '''
-
     :param number: number of items to print
     :param char: each item of printed line
     :return: line string
