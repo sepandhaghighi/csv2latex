@@ -1,5 +1,5 @@
 '''
-from csv2latex import *
+>>> from csv2latex import *
 >>> line(6)
 '------'
 >>> line(6,"^")
